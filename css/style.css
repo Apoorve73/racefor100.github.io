@@ -59,3 +59,8 @@ body {
     color: #fff;
     font-family: sans-serif;
 } */
+
+.form-group {
+    color: rgb(58, 214, 188);
+    font-weight: 500;
+}
