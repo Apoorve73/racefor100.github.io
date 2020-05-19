@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/back1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px
+}
+
+.content {
+    padding-top: 0%;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#button {
+    background: #44c708;
+    ;
+    color: black;
+    border-color: black;
+    border-width: 3px;
+    font-weight: 400;
+    font-size: larger;
+}
+
+#button:hover {
+    background-color: green;
+    color: black;
+    text-shadow: black;
+    border-color: green;
+}
+
+.btn-success {
+    color: black;
+}
+
+#particles-js {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../images/back.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* .logo {
+    margin-top: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+} */
+
+
+/* .welcome {
+    margin-left: 5%;
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+} */
