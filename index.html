@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- <script src="script.js" type="text/javascript"></script> -->
+    <title>
+        Race for the 100
+    </title>
+
+</head>
+
+<body>
+    <!-- <div class="logo">Race! For the 100</div> -->
+
+    <div id="particles-js">
+        <div class="container">
+            <!-- <p> RAce </p> -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content">
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Welcome to RACE FOR THE 100</h4>
+                            <p>
+                                <ul>
+                                    <li>After hiting PLAY button, you will be prompted to enter your name.</li>
+                                    <li>Then you have to guess a number in between 1 and 10, and type that in.</li>
+                                    <li>Then computer will similarly guess one such number, add it to yours, and return the SUM</li>
+                                    <li>The game keeps on going this way, alternatively.</li>
+                                    <li>The one who sum up to 100 at first place, will win the game.</li>
+                                </ul>
+                            </p>
+                            <hr>
+                            <p class="mb-0">Tip: If you get the trick, you will always WIN!</p>
+                        </div>
+                        <button type="button" id="button" class="btn btn-success btn-lg">PLAY</button><br><br>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="1" class="btn btn-secondary">1</button>
+                            <button type="button" id="2" class="btn btn-secondary">2</button>
+                            <button type="button" id="3" class="btn btn-secondary">3</button>
+                            <button type="button" id="4" class="btn btn-secondary">4</button>
+                            <button type="button" id="5" class="btn btn-secondary">5</button>
+                            <button type="button" id="6" class="btn btn-secondary">6</button>
+                            <button type="button" id="7" class="btn btn-secondary">7</button>
+                            <button type="button" id="8" class="btn btn-secondary">8</button>
+                            <button type="button" id="9" class="btn btn-secondary">9</button>
+                            <button type="button" id="10" class="btn btn-secondary">10</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modify this form HTML and place wherever you want your form -->
+
+            <form action="https://formspree.io/xqkyedby" method="POST">
+                <label>
+  Your email:
+  <input type="text" name="_replyto">
+</label>
+                <label>
+  Your suggestions:
+  <textarea name="message"></textarea>
+</label>
+
+                <!-- your other form fields go here -->
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function raceforit(sum, count, compcount) {
+            var guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
+            if (guess > 10 || guess < 1) {
+                alert("Wrong entry!! Try again!")
+                guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
+            }
+            var number = Number(guess)
+
+            sum = sum + number;
+            if (sum == 100) {
+                alert("You win the game");
+                return;
+            }
+            compcount = compcount + 1;
+            computer = Math.floor(Math.random() * 10) + 1;
+            sum = sum + computer;
+            console.log(computer + "and" + sum)
+            if (sum >= 100) {
+                alert("Computer wins!")
+                return;
+            }
+            // } else if (sum > 100) {
+            //     alert("Sum has crossed 100! Computer Wins!")
+            //     return;
+            else {
+                count = count + 1;
+                if (guess > 10 || guess < 1) {
+                    alert("Wrong entry!! Try again!")
+                    guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
+                }
+                raceforit(sum, count, compcount);
+            }
+        }
+        var button = document.getElementById("button");
+        if (button) {
+            button.addEventListener('click', function() {
+                var name = prompt("Enter your name ")
+                alert("Welcome to the game " + name);
+                var sum = 0;
+                var count = 1;
+                var compcount = 0;
+                raceforit(sum, count, compcount);
+            });
+        }
+    </script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
