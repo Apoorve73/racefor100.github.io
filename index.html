@@ -38,6 +38,9 @@
                             <p class="mb-0">Tip: If you get the trick, you will always WIN!</p>
                         </div>
                         <button type="button" id="button" class="btn btn-success btn-lg">PLAY</button><br><br>
+                        <div class="alert alert-danger" role="alert">
+                            These buttons are currently disabled
+                        </div><br>
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" id="1" class="btn btn-secondary">1</button>
                             <button type="button" id="2" class="btn btn-secondary">2</button>
@@ -52,22 +55,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><br><br>
             <!-- modify this form HTML and place wherever you want your form -->
 
             <form action="https://formspree.io/xqkyedby" method="POST">
-                <label>
-  Your email:
-  <input type="text" name="_replyto">
-</label>
-                <label>
-  Your suggestions:
-  <textarea name="message"></textarea>
-</label>
-
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Your email</label>
+                    <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Your suggestions:</label>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
                 <!-- your other form fields go here -->
-
-                <button type="submit">Send</button>
+                <button class="btn btn-primary mb-2" type="submit">Send</button>
             </form>
         </div>
     </div>
