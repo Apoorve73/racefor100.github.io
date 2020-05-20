@@ -81,19 +81,18 @@
             var guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
             if (guess > 10 || guess < 1) {
                 alert("Wrong entry!! Try again!")
-                raceforit(sum,count,compcount);
+                raceforit(sum, count, compcount);
                 return;
                 //guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
-            }
-            else{
+            } else {
                 var number = Number(guess)
                 sum = sum + number;
                 if (sum == 100) {
                     alert("You win the game");
-                return;
+                    return;
                 }
             }
-            
+
             compcount = compcount + 1;
             computer = Math.floor(Math.random() * 10) + 1;
             sum = sum + computer;
