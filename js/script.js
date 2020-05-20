@@ -17,18 +17,18 @@ function raceforit(sum, count, compcount) {
         quit = prompt("Are you sure you want to quit? Type Y if Yes and N if No")
         quitgame(quit, sum, count, compcount)
         return
-    } else if (guess > 10 || guess < 1) {
-        alert("Wrong entry!! Try again!")
-        raceforit(sum, count, compcount);
-        return;
-        //guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
-    } else {
+    } else if(guess >0 && guess <=10) {
         var number = Number(guess)
         sum = sum + number;
         if (sum == 100) {
             alert("You win the game");
             return;
         }
+    } else {
+        alert("Wrong entry!! Try again!")
+        raceforit(sum, count, compcount);
+        return;
+        //guess = prompt("Enter a number in between 1 and 10. Present sum is Your sum + Computer's Choice = " + sum);
     }
 
     compcount = compcount + 1;
