@@ -40,8 +40,8 @@ if (button) {
 const numButton =document.querySelectorAll("[data-num]");
 function entryByElement(sum,count,compcount){
     numButton.forEach(button=>{
-        button.addEventListener('click',abc);
-        function abc(){
+        button.addEventListener('click',clickedNumBtn);
+        function clickedNumBtn(){
             var btnShow =button.innerText;
             console.log(btnShow);
             sum=raceforit(sum,count,compcount,btnShow);
