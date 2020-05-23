@@ -11,21 +11,6 @@ body {
     height: 1000px
 }
 
-#user {
-    font-size: 30px;
-    color: white;
-}
-
-#computer {
-    font-size: 30px;
-    color: white;
-}
-
-.score {
-    color: white;
-    font-size: 30px;
-}
-
 .content {
     padding-top: 0%;
     text-align: center;
