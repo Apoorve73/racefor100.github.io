@@ -7,7 +7,7 @@ This is a development level project. **Contrbution.md** will be *updated soon*.
 
 ## For contribtors, working on issues
 1. Use the branch **scoreboard_btn_input** so as to work with Issues #11 and #8.
-2. After these issue sare resolved, it would be merged with the master branch.
+2. After these issues are resolved, it would be merged with the master branch.
 
 ### There is a suggestion box available on website. Any suggstions for further improvment are open!
 
