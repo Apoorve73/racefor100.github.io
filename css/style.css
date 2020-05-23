@@ -64,3 +64,23 @@ body {
     color: rgb(58, 214, 188);
     font-weight: 500;
 }
+.scoreboard{
+    display: grid;
+    align-content: center;
+    justify-items: center;  
+}
+#scoreboard-1{
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#scoreboard-2{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#scoreboard-3{
+    color: white;
+    font-size: 1.7em;
+    font-weight: bold;
+}
