@@ -9,7 +9,11 @@ function quitgame(quit, sum, count, compcount) {
         //raceforit(sum, count, compcount);
     }
 }
+var userScoreArea =document.getElementById("scoreboard-1");
+var compScoreArea =document.getElementById("scoreboard-2");
+var sumArea = document.getElementById("scoreboard-3");
 var numOfTime=1;  
+
 var button = document.getElementById("button");
 if (button) {
     button.addEventListener('click', function() {
@@ -49,10 +53,11 @@ function entryByElement(sum,count,compcount){
     })
 }
 
+
 function raceforit(sum, count, compcount,btnShow) {
     
     //console.log(sum);
-    var guess = prompt("Enter a number in between 1 and 10.\nPresent sum is Your sum + Computer's Choice = " + sum, btnShow);
+    var guess = btnShow;
     var number = Number(guess)
     //console.log(guess);
     if (guess == null) {
@@ -65,6 +70,7 @@ function raceforit(sum, count, compcount,btnShow) {
         if (sum >= 100) {
             alert("You win the game");
             //numOfTime=1;
+            reset();
             return 0;
         }
         compcount = compcount + 1;
@@ -74,15 +80,25 @@ function raceforit(sum, count, compcount,btnShow) {
         if (sum >= 100) {
             alert("Computer wins!")
             //numOfTime=1;
+            reset();
             return 0;
         }
         //console.log("return ",sum);
-        alert("Number guessed by computer : "+computer +"\nSum becomes :"+sum +"\nCHOOSE NEXT NUMBER :-->")
+        //alert("Number guessed by computer : "+computer +"\nSum becomes :"+sum +"\nCHOOSE NEXT NUMBER :-->")
+        userScoreArea.innerText="Number Entered By You  : "+number;
+        compScoreArea.innerText="Number guessed By Computer: "+computer;
+        sumArea.innerText="Total sum = Previous Sum + "+number+" + "+computer+" = "+sum;
         
         return sum;
+        
     } else {
         alert("Wrong entry!!\n You can Only Choose a Number Between 1 and 10\n Start Over again and choose your first number")
         return 0;
+    }
+    function reset(){
+        userScoreArea.innerText="Number Entered By You  : "+0;
+        compScoreArea.innerText="Number guessed By Computer: "+0;
+        sumArea.innerText="Total sum = Previous Sum + "+0+" + "+0+" = "+0;
     }
 }
 
