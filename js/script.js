@@ -67,7 +67,7 @@ function raceforit(sum, count, compcount,btnShow) {
     } else if(guess >0 && guess <=10) {
         sum = sum + number;
         //console.log(number,sum);
-        if (sum >= 100) {
+        if (sum == 100) {
             alert("You win the game");
             //numOfTime=1;
             reset();
