@@ -69,7 +69,11 @@ function raceforit(sum, count, compcount,btnShow) {
         //console.log(number,sum);
         if (sum == 100) {
             alert("You win the game");
-            //numOfTime=1;
+            reset();
+            return 0;
+        }
+        else if(sum>100){
+            alert("oops, you crossed 100 , reach to exact 100 next time to win\nComputer wins!");
             reset();
             return 0;
         }
