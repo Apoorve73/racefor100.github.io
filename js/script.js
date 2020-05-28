@@ -12,12 +12,13 @@ function quitgame(quit, sum, count, compcount) {
 var userScoreArea =document.getElementById("scoreboard-1");
 var compScoreArea =document.getElementById("scoreboard-2");
 var sumArea = document.getElementById("scoreboard-3");
-var numOfTime=1;  
+//var numOfTime=1;  
 
 var button = document.getElementById("button");
 if (button) {
     button.addEventListener('click', function() {
-        if(numOfTime==1){                     //A check to make sure player must complete a game before hitting the PLAY button again
+        //if(numOfTime==1){                     
+            //A check to make sure player must complete a game before hitting the PLAY button again
             var name = prompt("Enter your name ")
             // to ensure player must enter the name
             if(name!=null && name!=""){
@@ -26,6 +27,7 @@ if (button) {
                 var count=0;
                 var compcount = 0;
                 numOfTime=0;
+                button.parentNode.removeChild(button)
                 entryByElement(sum,count,compcount);
             }else if(name==""){
                 alert("You must Enter a name ");
@@ -33,9 +35,12 @@ if (button) {
                 alert("Come again Prepared !! ");
             }
             
-        }else {
-            alert("You are Already in the game , continue and choose the number from below buttons :-->");
-        }
+        //}
+        // Now this else is not needed as button is removed already
+
+        // else {
+        //     alert("You are Already in the game , continue and choose the number from below buttons :-->");
+        // }
         
                
     });
