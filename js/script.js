@@ -6,40 +6,58 @@ function quitgame(quit, sum, count, compcount) {
     raceforit(sum, count, compcount);
   } else {
     alert("Wrong input! Continue the game!");
-    // raceforit(sum, count, compcount);
   }
 }
+/**
+ * these three variables are text area of scoreboard, 
+ * for the player's guess, computer guess and total sum
+ */
 var userScoreArea = document.getElementById("scoreboard-1");
 var compScoreArea = document.getElementById("scoreboard-2");
 var sumArea = document.getElementById("scoreboard-3");
-// var numOfTime=1;
 
+/**
+ * game starts from here, as the player hits player button
+ * name prompt is displayed
+ */
 var button = document.getElementById("button");
 if (button) {
   button.addEventListener("click", function () {
     var name = prompt("Enter your name ");
-    // to ensure player must enter the name
+
+    /*This if condition ensures player must enter the name to proceed further*/
     if (name != null && name != "") {
       alert(
         "Welcome to the game " +
           name +
           "\nChoose a number from below BUTTONS :--> "
       );
-      var sum = 0;
+      var sum = 0;    
       var count = 0;
       var compcount = 0;
-      numOfTime = 0;
+
+      /* hide play button as game starts */
       button.setAttribute("style", "display:none");
+      /**
+       * if the player enters the name correctly, then the game proceed further and
+       * entryByElement function is called, which enables player to choose a number from buttons
+       */
       entryByElement(sum, count, compcount);
-    } else if (name == "") {
+
+    /* if name field is left blank, show error */
+    } else if (name == "") {                
       alert("You must Enter a name ");
-    } else {
+    /* if user cancel the name prompt, display messege */
+    } else {                                
       alert("Come again Prepared !! ");
     }
   });
 }
 
+/* selects all number-buttons (from 1-10) */
 const numButton = document.querySelectorAll("[data-num]");
+
+
 function entryByElement(sum, count, compcount) {
   numButton.forEach((button) => {
     button.addEventListener("click", clickedNumBtn);
@@ -113,13 +131,22 @@ function raceforit(sum, count, compcount, btnShow) {
     return sum;
   }
 
+
+  /** 
+* scoreboard which display number guess by player and computer.
+* @param {Number} number - number guessed by the player.
+* @param {Number} sum - sum of the number guessed by player and computer.
+* @param {Number} computer - number guessed by the computer.
+*/
   function showScoreboard(number, sum, computer) {
     userScoreArea.innerText = "Number Entered By You  : " + number;
     compScoreArea.innerText = "Number guessed By Computer: " + computer;
     sumArea.innerText =
       "Total sum = Previous Sum + " + number + " + " + computer + " = " + sum;
   }
-
+/** 
+* After each game this function reset the scores and display play button again.
+*/
   function reset() {
     userScoreArea.innerText = "Number Entered By You  : " + 0;
     compScoreArea.innerText = "Number guessed By Computer: " + 0;
