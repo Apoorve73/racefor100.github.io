@@ -32,7 +32,7 @@ if (button) {
       var count = 0;
       var compcount = 0;
       numOfTime = 0;
-      button.parentNode.removeChild(button);
+      button.setAttribute("style", "display:none");
       entryByElement(sum, count, compcount);
     } else if (name == "") {
       alert("You must Enter a name ");
@@ -117,5 +117,6 @@ function raceforit(sum, count, compcount, btnShow) {
     compScoreArea.innerText = "Number guessed By Computer: " + 0;
     sumArea.innerText =
       "Total sum = Previous Sum + " + 0 + " + " + 0 + " = " + 0;
+    button.setAttribute("style", "display:block");
   }
 }
