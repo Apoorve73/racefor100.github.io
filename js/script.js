@@ -16,18 +16,15 @@ var sumArea = document.getElementById("scoreboard-3");
 
 var button = document.getElementById("button");
 if (button) {
-  button.addEventListener("click", function () {
+  button.addEventListener("click", function() {
     // if(numOfTime==1){
     // A check to make sure player must complete a game before hitting the PLAY
     // button again
     var name = prompt("Enter your name ");
     // to ensure player must enter the name
     if (name != null && name != "") {
-      alert(
-        "Welcome to the game " +
-          name +
-          "\nChoose a number from below BUTTONS :--> "
-      );
+      alert("Welcome to the game " + name +
+            "\nChoose a number from below BUTTONS :--> ");
       var sum = 0;
       var count = 0;
       var compcount = 0;
@@ -68,9 +65,8 @@ function raceforit(sum, count, compcount, btnShow) {
   var number = Number(guess);
   // console.log(guess);
   if (guess == null) {
-    var quit = prompt(
-      "Are you sure you want to quit? Type Y if Yes and N if No"
-    );
+    var quit =
+        prompt("Are you sure you want to quit? Type Y if Yes and N if No");
     quitgame(quit, sum, count, compcount);
     return 0;
   } else if (guess > 0 && guess <= 10) {
@@ -82,8 +78,7 @@ function raceforit(sum, count, compcount, btnShow) {
       return 0;
     } else if (sum > 100) {
       alert(
-        "oops, you crossed 100 , reach to exact 100 next time to win\nComputer wins!"
-      );
+          "oops, you crossed 100 , reach to exact 100 next time to win\nComputer wins!");
       reset();
       return 0;
     }
@@ -103,20 +98,19 @@ function raceforit(sum, count, compcount, btnShow) {
     userScoreArea.innerText = "Number Entered By You  : " + number;
     compScoreArea.innerText = "Number guessed By Computer: " + computer;
     sumArea.innerText =
-      "Total sum = Previous Sum + " + number + " + " + computer + " = " + sum;
+        "Total sum = Previous Sum + " + number + " + " + computer + " = " + sum;
 
     return sum;
   } else {
     alert(
-      "Wrong entry!!\n You can Only Choose a Number Between 1 and 10\n Start Over again and choose your first number"
-    );
+        "Wrong entry!!\n You can Only Choose a Number Between 1 and 10\n Start Over again and choose your first number");
     return 0;
   }
   function reset() {
     userScoreArea.innerText = "Number Entered By You  : " + 0;
     compScoreArea.innerText = "Number guessed By Computer: " + 0;
     sumArea.innerText =
-      "Total sum = Previous Sum + " + 0 + " + " + 0 + " = " + 0;
+        "Total sum = Previous Sum + " + 0 + " + " + 0 + " = " + 0;
     button.setAttribute('style', 'display:block');
   }
 }
