@@ -1,4 +1,3 @@
-
 /**
  * these three variables are text area of scoreboard,
  * for the player's guess, computer guess and total sum, respectively
@@ -13,13 +12,16 @@ var sumArea = document.getElementById("scoreboard-3");
  */
 var button = document.getElementById("button"); // PLAY button
 if (button) {
-  button.addEventListener("click", function() {
+  button.addEventListener("click", function () {
     var name = prompt("Enter your name ");
 
     /*This if condition ensures player must enter the name to proceed further*/
     if (name != null && name != "") {
-      alert("Welcome to the game " + name +
-            "\nChoose a number from below BUTTONS :--> ");
+      alert(
+        "Welcome to the game " +
+          name +
+          "\nChoose a number from below BUTTONS :--> "
+      );
       var sum = 0;
       var count = 0;
       var compcount = 0;
@@ -83,10 +85,10 @@ function raceforit(sum, _count, compcount, btnShow) {
   this var 'game' stops any other further alerts.
   */
   if (sum > 100) {
-    if (game === 1)
-      return 0;
+    if (game === 1) return 0;
     alert(
-        "oops, you crossed 100, reach to exact 100 next time to win\nComputer wins!");
+      "oops, you crossed 100, reach to exact 100 next time to win\nComputer wins!"
+    );
     reset();
     return 0;
 
@@ -108,13 +110,11 @@ function raceforit(sum, _count, compcount, btnShow) {
   compcount = compcount + 1;
 
   /*guess by computer*/
-  if (sum < 90)
-    computer = Math.floor(Math.random() * 10) + 1;
+  if (sum < 90) computer = Math.floor(Math.random() * 10) + 1;
   /*
   computer is smarter now, it can detect as sum becomes 90 or more
   and guesses the required number to reach 100.
-  */
-  else
+  */ else
     computer = 100 - sum;
 
   /*Adding guess of computer to the sum*/
@@ -149,7 +149,7 @@ function raceforit(sum, _count, compcount, btnShow) {
     userScoreArea.innerText = "Number Entered By You  : " + number;
     compScoreArea.innerText = "Number guessed By Computer: " + computer;
     sumArea.innerText =
-        "Total sum = Previous Sum + " + number + " + " + computer + " = " + sum;
+      "Total sum = Previous Sum + " + number + " + " + computer + " = " + sum;
   }
 
   /**
@@ -160,7 +160,7 @@ function raceforit(sum, _count, compcount, btnShow) {
     userScoreArea.innerText = "Number Entered By You  : " + 0;
     compScoreArea.innerText = "Number guessed By Computer: " + 0;
     sumArea.innerText =
-        "Total sum = Previous Sum + " + 0 + " + " + 0 + " = " + 0;
+      "Total sum = Previous Sum + " + 0 + " + " + 0 + " = " + 0;
     button.setAttribute("style", "display:block");
     window.location.reload();
   }
