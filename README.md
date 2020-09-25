@@ -5,6 +5,8 @@ This is a development level project. **Contrbution.md** will be *updated soon*.
 
 *The page is **DEPLOYED** for **master branch**.
 
+This project is licensed under the terms of the MIT license.
+
 ## For contribtors, working on issues
 1. Pull requests will be merged only when the work is considered completed, else it will be merged with a WIP, in case, more changes are applicable.
 2. [Restyled.io](https://restyled.io/) bot is added to this repository to keep a quality check on PRs made.
