@@ -10,7 +10,7 @@ This project is licensed under the terms of the MIT license.
 
 ## Rules of Gameplay
 
-- After hiting the `PLAY` button, you will be prompted to enter your name.
+- After hitting the `PLAY` button, you will be prompted to enter your name.
 - Then you have to guess a number between 1 and 10, and choose that number from
   the buttons below.
 - Similarly, the computer will guess one such number to add it to yours, and
