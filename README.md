@@ -1,5 +1,7 @@
 # Welcome to Race for the 100 game
 
+![RaceFor100 GIF](https://i.imgur.com/IOBdr7F.gif)
+
 This **Guess to Win** based game is developed as a part of **100DaysOfCode**.
 Try playing with the game. This is a development level project.
 **Contrbution.md** will be _updated soon_.
