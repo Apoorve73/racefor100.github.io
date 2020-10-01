@@ -8,6 +8,8 @@ Try playing with the game. This is a development level project.
 
 This project is licensed under the terms of the MIT license.
 
+![](racefor100.gif)
+
 ## Rules of Gameplay
 
 - After hitting the `PLAY` button, you will be prompted to enter your name.
